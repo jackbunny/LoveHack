@@ -35,7 +35,10 @@ my $DSP = '/';				# ... for printing
 #	# NB: We don't need to do anything about File::Spec.  It doesn't know
 #	#     about msys but it defaults to Unix, so we'll be ok.
 #}
-if($^O eq "MSWin32"){
+
+print "OS: $^O\n";
+
+if($^O eq "MSWin32" || $^O eq "msys"){
 	$DS = quotemeta('\\');
 	$DSP = '\\';
 }

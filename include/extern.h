@@ -658,7 +658,8 @@ E void VDECL(panic, (const char *, ...)) PRINTF_F(1, 2) NORETURN;
 E void FDECL(done, (int));
 E void FDECL(container_contents, (struct obj *, BOOLEAN_P,
                                   BOOLEAN_P, BOOLEAN_P));
-E void FDECL(terminate, (int)) NORETURN;
+
+E void FDECL(terminate_game, (int)) NORETURN;
 E int NDECL(dovanquished);
 E int NDECL(num_genocides);
 E void FDECL(delayed_killer, (int, int, const char *));

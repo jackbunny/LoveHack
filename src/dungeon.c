@@ -247,7 +247,7 @@ dlb *stream;
         panic(
   "Premature EOF on dungeon description file!\r\nExpected %d bytes - got %d.",
               (size * nitems), (size * cnt));
-        terminate(EXIT_FAILURE);
+        terminate_game(EXIT_FAILURE);
     }
 }
 
@@ -1638,7 +1638,7 @@ lev_by_name(nam)
 const char *nam;
 {
     schar lev = 0;
-    s_level *slev;
+    s_level *slev = NULL;
     d_level dlev;
     const char *p;
     int idx, idxtoo;

@@ -221,7 +221,7 @@ const char *mesg;
 {
     clearlocks();
     tty_exit_nhwindows(mesg);
-    terminate(EXIT_SUCCESS);
+    terminate_game(EXIT_SUCCESS);
     /*NOTREACHED*/
 }
 
@@ -2660,7 +2660,7 @@ boolean complain;
             }
             if (complain)
                 sleep(10); /* want to wait_synch() but stdin is gone */
-            terminate(EXIT_FAILURE);
+            terminate_game(EXIT_FAILURE);
         }
         (void) close(fd);
 #ifdef notyet
